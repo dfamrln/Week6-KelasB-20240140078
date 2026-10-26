@@ -3,44 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Week 6 - DOM & Fetch API</title>
+    <title>Tugas Week 6</title>
+    <!-- Menggunakan font Inter dari Google Fonts untuk kesan modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Implementasi DOM, Event Handling & Fetch API</h1>
-
-        <!-- BAGIAN 2: Form - DOM & Event Handling -->
-        <section id="form-section" class="card">
-            <h2>Form Pendaftaran Member</h2>
-            <p>Silakan isi form di bawah ini untuk menguji Event Handling & DOM.</p>
+        
+        <!-- Form Pendaftaran -->
+        <section class="form-section">
+            <h2>Pendaftaran Member</h2>
             
             <form id="memberForm">
-                <div class="form-group">
-                    <label for="fullname">Nama Lengkap:</label>
-                    <input type="text" id="fullname" placeholder="Masukkan nama Anda">
+                <div class="input-group">
+                    <input type="text" id="fullname" placeholder="Nama Lengkap">
                 </div>
-                <div class="form-group">
-                    <label for="email">Alamat Email:</label>
-                    <input type="email" id="email" placeholder="Masukkan email Anda">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Alamat Email">
                 </div>
-                <button type="submit" id="submitBtn">Daftar Sekarang</button>
+                <button type="submit" id="submitBtn">Daftar</button>
             </form>
             
-            <!-- Tempat untuk menampilkan feedback hasil form -->
             <div id="formFeedback" class="feedback-box" style="display: none;"></div>
         </section>
 
-        <!-- BAGIAN 1: Fetch API - Data Produk -->
-        <section id="fetch-section" class="card">
-            <h2>Daftar Produk (DummyJSON)</h2>
-            <p>Data di bawah ini diambil menggunakan Fetch API.</p>
+        <!-- Daftar Produk -->
+        <section class="product-section">
+            <h2>Katalog Produk</h2>
             
-            <!-- Tempat menampilkan status loading, error, atau list produk -->
             <div id="productContainer">
-                <p id="loadingMsg" class="info-msg">Memuat data produk...</p>
+                <p id="loadingMsg" class="info-msg">Memuat katalog...</p>
             </div>
         </section>
+
     </div>
 
     <script src="script.js"></script>
